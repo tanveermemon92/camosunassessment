@@ -1,103 +1,88 @@
-Camosun Program Area Enrollment Analysis (2020/21–2023/24)
-Overview
-This project analyzes Camosun College’s program‑area enrollment patterns from 2020/21 to 2023/24 using data from the BC Post‑Secondary Central Data Warehouse “Standard Reports – Program Area Totals” (May 2025 submission) and Camosun’s public program information. The goal is to provide clear, leadership‑ready insights and visuals for strategic planning.​​
+# Camosun Program Area Enrollment Analysis (2020/21–2023/24)
 
-Objectives
-Identify notable trends in Camosun’s program‑area enrollments (e.g., Health, Arts & Sciences, Business).​
+## Overview
 
-Quantify growth/decline across years and program areas.
+This project analyzes **Camosun College's program-area enrollment patterns** from 2020/21 to 2023/24 using data from the **BC Post-Secondary Central Data Warehouse "Standard Reports – Program Area Totals" (May 2025 submission)** and Camosun's public program information.[file:69][web:83]
 
-Visualize these patterns for a non‑technical leadership audience.
+**Goal:** Provide clear, leadership-ready insights and visuals for strategic planning.
 
-Situate Camosun in the broader BC and national sector context (e.g., international enrollment decline, health‑program expansion).​​
+## 🎯 Objectives
 
-Repository Structure
-Suggested structure:
+- Identify notable trends in Camosun's program-area enrollments (Health, Arts & Sciences, Business)
+- Quantify growth/decline across years and program areas
+- Visualize patterns for **non-technical leadership audience**
+- Situate Camosun in broader BC/national sector context (international decline, health expansion)[file:69][web:80]
 
-text
+## 📁 Repository Structure
+
 camosun_enrollment_analysis/
-├── data_setup.py              # Hard‑coded program and sector data setup
-├── analysis_metrics.py        # Growth calculations and summary metrics
-├── visuals.py                 # Chart creation (PNG outputs)
-├── run_analysis.py            # Orchestration script
-├── README.md                  # Project documentation (this file)
-└── data/                      # (Optional) CSVs if you export data later
-data_setup.py
+1.data_setup.py # Hard-coded program + sector data setup
+2.analysis_metrics.py # Growth calculations + summary metrics
+3. visuals.py # Chart creation (PNG outputs)
+4. run_analysis.py # Orchestration script
+5. README.md # Project documentation (this file)
+6. data/ # (Optional) CSVs if you export data later
 
-Builds pandas DataFrames for:
+## 🛠️ File Breakdown
 
-Camosun program‑area enrollments (2020/21–2023/24).
+### `data_setup.py`
+**Builds pandas DataFrames for:**
+- Camosun program-area enrollments (2020/21–2023/24)
+- Sector comparison table (BC colleges, universities, national average)[file:69][web:80]
 
-Sector comparison table (BC colleges, universities, national average).​​
+### `analysis_metrics.py`
+**Computes:**
+- Student growth (absolute + %) by program area (2020/21 vs 2023/24)
+- Summary stats: Health vs Arts & Sciences (health share of total enrollment)[file:69]
 
-analysis_metrics.py
+### `visuals.py`
+**Generates PNG charts for reports:**
+- 📈 **Line chart**: Key program trends over time
+- 📊 **Clustered bar chart**: 2020/21 vs 2023/24 headcount by program
+- 🥧 **Pie chart**: 2023/24 program mix
+- 📉 **Bar chart**: International enrollment decline by institution/average[file:69][web:80]
 
-Computes:
+### `run_analysis.py`
+**Runs full pipeline:**
+- Prints growth table + summary metrics to console
+- Saves all charts to working directory
 
-Student growth (absolute and %) by program area between 2020/21 and 2023/24.
+## ⚙️ Requirements
 
-Summary stats for Health vs Arts & Sciences (e.g., health share of total enrollment).​
-
-visuals.py
-
-Generates PNG charts suitable for reports:
-
-Line chart: key program trends over time.
-
-Clustered bar chart: 2020/21 vs 2023/24 headcount by program.
-
-Pie chart: 2023/24 program mix.
-
-Bar chart: international enrollment decline by institution/average.​​
-
-run_analysis.py
-
-Runs the full pipeline:
-
-Prints growth table and summary metrics to the console.
-
-Saves all charts to the working directory.
-
-Requirements
-Python 3.9+ (or similar)
-
-Packages:
-
-pandas (data handling)​
-
-matplotlib (basic charting)
-
-Install dependencies:
-
-bash
+**Python 3.9+**
+**Packages:**
+- `pandas` (data handling)[web:83][web:80]
+- `matplotlib` (basic charting)
 pip install pandas matplotlib
-How to Run
-From the project root:
 
-bash
+## 🚀 How to Run
+
+**From project root:**
 python run_analysis.py
-This will:
 
-Output a formatted growth table and health vs arts summary in the terminal.
+**Output:**
+✅ Formatted growth table + health vs arts summary (terminal)  
+✅ Chart PNGs: `program_trends.png`, `program_2020_vs_2023.png`, `program_mix_2023.png`, `sector_international_decline.png`
 
-Create chart image files (e.g., program_trends.png, program_2020_vs_2023.png, program_mix_2023.png, sector_international_decline.png).
+**Insert PNGs directly into Word, PowerPoint, or presentation tools.**
 
-You can insert these PNGs directly into Word, PowerPoint, or other presentation tools.
+## 📊 Data Sources
 
-Data Sources
-Program Area Totals: “Standard Reports – Program Area Totals” PDF, BC Ministry of Post‑Secondary Education & Future Skills, Post‑Secondary Central Data Warehouse, May 2025 submission (Camosun College excerpt).​
+1. **Program Area Totals**: "Standard Reports – Program Area Totals" PDF, BC Ministry of Post-Secondary Education & Future Skills, Post-Secondary Central Data Warehouse, May 2025 submission (Camosun College excerpt)[file:69]
+2. **Camosun Context**: Public information about programs + strategic priorities from Camosun website[web:83]
 
-Camosun Context: Public information about Camosun’s programs and strategic priorities from its website.​
+*Code uses hard-coded values from Camosun section of Program Area report. Replace with CSV imports or database connections as needed.*[file:69][web:80]
 
-The code currently uses hard‑coded values copied from the Camosun portion of the Program Area report; you can later replace these with CSV imports or direct database connections if needed.​​
+## 🔮 Extending the Project
 
-Extending the Project
-Ideas for extensions:
+**Future enhancements:**
+- Replace hard-coded data → CSVs from official reports
+- Add filters/arguments to `run_analysis.py` (e.g., focus Health only)
+- Export tables → CSV/Excel for non-technical users
+- Mirror visuals in **Tableau** using same data structure for interactive dashboards
 
-Replace hard‑coded data with CSVs downloaded or transcribed from the official reports.
+---
 
-Add filters/arguments in run_analysis.py (e.g., focus only on Health vs all others).
-
-Export tables to CSV or Excel for sharing with non‑technical users.
-
-Mirror visuals in Tableau using the same data structure for interactive dashboards.
+**Last Updated:** December 5, 2025  
+**Data Period:** 2020/21–2023/24  
+**Next Update:** May 2026 (2024/25 data)
