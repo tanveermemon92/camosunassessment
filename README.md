@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project analyzes **Camosun College's program-area enrollment patterns** from 2020/21 to 2023/24 using data from the **BC Post-Secondary Central Data Warehouse "Standard Reports – Program Area Totals" (May 2025 submission)** and Camosun's public program information.[file:69][web:83]
+This project analyzes **Camosun College's program-area enrollment patterns** from 2020/21 to 2023/24 using data from the **BC Post-Secondary Central Data Warehouse "Standard Reports – Program Area Totals" (May 2025 submission)** and Camosun's public program information
 
 **Goal:** Provide clear, leadership-ready insights and visuals for strategic planning.
 
@@ -11,7 +11,7 @@ This project analyzes **Camosun College's program-area enrollment patterns** fro
 - Identify notable trends in Camosun's program-area enrollments (Health, Arts & Sciences, Business)
 - Quantify growth/decline across years and program areas
 - Visualize patterns for **non-technical leadership audience**
-- Situate Camosun in broader BC/national sector context (international decline, health expansion)[file:69][web:80]
+- Situate Camosun in broader BC/national sector context (international decline, health expansion)
 
 ## 📁 Repository Structure
 
@@ -27,19 +27,19 @@ This project analyzes **Camosun College's program-area enrollment patterns** fro
 ### `data_setup.py`
 **Builds pandas DataFrames for:**
 - Camosun program-area enrollments (2020/21–2023/24)
-- Sector comparison table (BC colleges, universities, national average)[file:69][web:80]
+- Sector comparison table (BC colleges, universities, national average)
 
 ### `analysis_metrics.py`
 **Computes:**
 - Student growth (absolute + %) by program area (2020/21 vs 2023/24)
-- Summary stats: Health vs Arts & Sciences (health share of total enrollment)[file:69]
+- Summary stats: Health vs Arts & Sciences (health share of total enrollment)
 
 ### `visuals.py`
 **Generates PNG charts for reports:**
 - 📈 **Line chart**: Key program trends over time
 - 📊 **Clustered bar chart**: 2020/21 vs 2023/24 headcount by program
 - 🥧 **Pie chart**: 2023/24 program mix
-- 📉 **Bar chart**: International enrollment decline by institution/average[file:69][web:80]
+- 📉 **Bar chart**: International enrollment decline by institution/average
 
 ### `run_analysis.py`
 **Runs full pipeline:**
@@ -50,7 +50,7 @@ This project analyzes **Camosun College's program-area enrollment patterns** fro
 
 **Python 3.9+**
 **Packages:**
-- `pandas` (data handling)[web:83][web:80]
+- `pandas` (data handling)
 - `matplotlib` (basic charting)
 pip install pandas matplotlib
 
@@ -67,10 +67,10 @@ python run_analysis.py
 
 ## 📊 Data Sources
 
-1. **Program Area Totals**: "Standard Reports – Program Area Totals" PDF, BC Ministry of Post-Secondary Education & Future Skills, Post-Secondary Central Data Warehouse, May 2025 submission (Camosun College excerpt)[file:69]
-2. **Camosun Context**: Public information about programs + strategic priorities from Camosun website[web:83]
+1. **Program Area Totals**: "Standard Reports – Program Area Totals" PDF, BC Ministry of Post-Secondary Education & Future Skills, Post-Secondary Central Data Warehouse, May 2025 submission (Camosun College excerpt)
+2. **Camosun Context**: Public information about programs + strategic priorities from Camosun website.
 
-*Code uses hard-coded values from Camosun section of Program Area report. Replace with CSV imports or database connections as needed.*[file:69][web:80]
+*Code uses hard-coded values from Camosun section of Program Area report. Replace with CSV imports or database connections as needed.*
 
 ## 🔮 Extending the Project
 
@@ -82,5 +82,5 @@ python run_analysis.py
 
 ---
 
-**Last Updated:** December 5, 2025  
+**Last Updated:** 3:30pm December 5, 2025  
 **Data Period:** 2020/21–2023/24  
