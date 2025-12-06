@@ -15,13 +15,12 @@ This project analyzes **Camosun College's program-area enrollment patterns** fro
 
 ## 📁 Repository Structure
 
-camosun_enrollment_analysis/
-- 1.data_setup.py # Hard-coded program + sector data setup
-- 2.analysis_metrics.py # Growth calculations + summary metrics
-- 3. visuals.py # Chart creation (PNG outputs)
-- 4. run_analysis.py # Orchestration script
-- 5. README.md # Project documentation (this file)
-- 6. data/ # (Optional) CSVs if you export data later
+- data_setup.py # Hard-coded program + sector data setup
+- analysis_metrics.py # Growth calculations + summary metrics
+- visuals.py # Chart creation (PNG outputs)
+- run_analysis.py # Orchestration script
+- README.md # Project documentation (this file)
+- data/ # (Optional) CSVs if you export data later
 
 ## 🛠️ File Breakdown
 
